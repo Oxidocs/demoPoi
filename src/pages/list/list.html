@@ -1,0 +1,64 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Poi App</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page">
+
+  <ion-card  *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <img src="assets/img/{{item.icon}}"/>
+    <div class="card-title">{{item.title}}</div>
+    <div class="card-subtitle">{{item.note}}</div>
+  </ion-card>
+
+  
+</ion-content>
+
+<!-- <ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon name="{{item.icon}}" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content> -->
+
+<!-- <ion-content class="cards-bg">
+  
+    <ion-card class="adv-map"  *ngFor="let item of items">
+      <div style="position: relative">
+        <img src="assets/img/mamalluca.jpg">
+        <ion-fab right top>
+          <button ion-fab class="fab-map">
+            <ion-icon name='pin'></ion-icon>
+          </button>
+        </ion-fab>
+      </div>
+      <ion-item>
+        <ion-icon color="subtle" large item-left name='pin' (click)="itemTapped($event, item)"></ion-icon>
+        <h2>Observatorio Cerro Mamalluca</h2>
+        <p>Cerro Mamalluca, Vicuña, Chile</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="subtle" large item-left name='wine'></ion-icon>
+        <h2>Institute of Fine Cocktails</h2>
+        <p>14 S. Hop Avenue, Madison, WI 53703</p>
+      </ion-item>
+      <ion-item actions>
+        <span item-left color="secondary" class="item-bold">18 min</span>
+        <span item-left color="subtle">(2.6 mi)</span>
+        <button ion-button color="primary" clear item-right icon-left>
+          <ion-icon name='navigate'></ion-icon>
+          Start
+        </button>
+      </ion-item>
+    </ion-card>
+
+</ion-content> -->
